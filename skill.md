@@ -13,7 +13,7 @@ Build city-level hub pages for local service businesses. An LLP is the page some
 
 ```
 /llp {client-slug} {city} {state}
-/local-landing-page staggs-plumbing plano tx
+/local-landing-page acme-plumbing dallas tx
 ```
 
 ## Execution Steps
@@ -31,7 +31,7 @@ Build city-level hub pages for local service businesses. An LLP is the page some
 
 Run the 3-layer intent model for the query `"[niche] [city]"`:
 
-**Layer 1 — Observable (literal query):** The keyword itself determines base archetype. "Emergency plumber Plano TX" = emergency. "Kitchen remodel Plano TX" = planning. "Dentist Plano TX" = hybrid.
+**Layer 1 — Observable (literal query):** The keyword itself determines base archetype. "Emergency plumber Dallas TX" = emergency. "Kitchen remodel Dallas TX" = planning. "Dentist Dallas TX" = hybrid.
 
 **Layer 2 — Inferred intent:** Classify as informational / commercial / transactional. This controls block depth — transactional = shorter, action-forward; informational = deeper PROCESS and CREDENTIALS blocks.
 
