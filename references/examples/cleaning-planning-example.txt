@@ -1,0 +1,128 @@
+# Planning Archetype Example (Cleaning)
+# Variables: {BUSINESS}, {CITY}, {STATE}, {PHONE}, {NEIGHBORHOOD_1-6}, {NEARBY_1-3}
+
+{BUSINESS}: House Cleaners in {CITY}, {STATE}
+Looking for reliable house cleaners in {CITY} who actually show up on time? {BUSINESS} brings systematic cleaning to your home with background-checked professionals who treat your space like their own.
+
+We're not just another professional residential cleaning company. Since {YEAR}, we've been helping {CITY}, {NEIGHBORHOOD_1}, {NEIGHBORHOOD_2}, and {NEIGHBORHOOD_3} families reclaim their weekends with cleaning that's done right the first time.
+
+- Same-week appointments throughout {CITY}
+- Save 20% with bi-weekly cleaning plans
+- 100% satisfaction guarantee
+- Over {COUNT} happy {CITY} homeowners trust us
+
+{RATING}★ from {REVIEW_COUNT}+ {CITY} customers | {AWARD} | Licensed & Insured
+
+Get Free Quote | {PHONE}
+
+
+## SERVICES_GRID
+Our House Cleaning Services in {CITY}
+Most cleaning companies in {CITY} promise the world and deliver mediocre results. {BUSINESS} does it differently.
+
+We use eco-friendly cleaning products that won't make your kids sneeze. Our systematic quality approach means you get the same thorough job every single visit. No shortcuts. No rushed cleanings.
+
+General House Cleaning: Your regular weekly, bi-weekly, or monthly lifesaver for busy {CITY} families.
+Deep House Cleaning: Comprehensive cleaning that tackles those spots you've been avoiding. Great for {CITY} seasonal refreshes.
+Move-In/Move-Out Cleaning: Perfect for {CITY} renters and new homeowners.
+Condo & Apartment Cleaning: Specialized for downtown {CITY} condos and {NEIGHBORHOOD_1} apartments.
+Post-Construction Cleaning: {CITY} renovation aftermath handled safely. Construction dust gets everywhere.
+
+
+## PRICING
+{CITY} House Cleaning Pricing
+Standard Cleaning (Most Popular): $120-$160 for a typical 3-bed, 2-bath home
+Deep Cleaning / One-Time Service: Starting from $350+
+Move-In/Move-Out: Starting from $400+ depending on home size
+Save 20% with bi-weekly cleaning plans. Free estimates for all {CITY} homeowners.
+
+
+## WHY_CHOOSE
+What Makes {BUSINESS} {CITY}'s Go-To House Cleaning Team
+{CITY} homeowners choose {BUSINESS} because we understand this community. We know {NEIGHBORHOOD_1}'s historic homes need different care than {NEIGHBORHOOD_4} newer builds.
+
+Local {CITY} Expertise: {YEARS} years serving this community means we understand your neighborhood's challenges.
+Proven {CITY} Results: Our systematic quality approach has earned over {REVIEW_COUNT} five-star reviews from {CITY} customers.
+Background-Checked Professionals: Every team member passes screening because {CITY} families deserve to feel safe.
+Same Cleaner Every Visit: You get the same person each time because consistency matters more than sending whoever's available.
+
+
+## GUARANTEE
+Our Promise to {CITY} Homeowners
+If something's not right after your cleaning, we'll return within 24 hours to fix it at no charge. No questions asked, no awkward conversations. This applies to every cleaning, every time.
+
+
+## REVIEWS
+{CITY} Customer Reviews
+"{BUSINESS} has been our {NEIGHBORHOOD_2} cleaning team for over a year now. They get into corners other companies completely ignored, like actually moving furniture to vacuum underneath. Always on time." - Sarah M., {NEIGHBORHOOD_2}
+
+"Third cleaning company was the charm. {BUSINESS} finally got our {CITY} home right. They're reliable, use eco-friendly products that don't trigger my allergies, and their satisfaction guarantee actually means something." - Michael T., {NEIGHBORHOOD_1}
+
+"Move-out cleaning in {NEIGHBORHOOD_3} was perfect. Landlord was shocked at how spotless everything looked. Got our entire deposit back!" - Jennifer L., {NEIGHBORHOOD_3}
+
+
+## PROCESS
+Our {CITY} Service Approach
+1. Phone Consult (10-15 min): Tell us about your home, your priorities, any allergies or pets.
+2. Custom Quote (same day): Written estimate based on home size, frequency, and specific needs.
+3. First Cleaning (scheduled within the week): Your assigned cleaner follows a systematic checklist.
+4. Walkthrough: Quick check before we leave. If anything's missed, we fix it on the spot.
+
+Most {CITY} homes are completed within 2-4 hours.
+
+
+## MEET_THE_TEAM
+[Only if real photos available. Skip entirely if not.]
+
+
+## LOCAL_KNOWLEDGE
+About {CITY} & Our Service Areas
+{CITY} is home to {POPULATION} residents across {REGION}. The mix of heritage homes, modern condos, and family neighborhoods creates diverse cleaning challenges that our experienced team handles with area-specific methods.
+
+{CITY}'s hard water and seasonal weather create specific cleaning needs: mineral buildup on fixtures, pollen in spring, salt tracked in during winter.
+
+
+## NEIGHBORHOODS
+Neighborhoods We Serve in {CITY}
+
+Core Areas: {NEIGHBORHOOD_1}, {NEIGHBORHOOD_2}, {NEIGHBORHOOD_3}, Downtown {CITY}
+Residential Communities: {NEIGHBORHOOD_4}, {NEIGHBORHOOD_5}, {NEIGHBORHOOD_6}
+We Also Serve: {NEARBY_1} (15 min), {NEARBY_2} (20 min), {NEARBY_3} (25 min)
+
+
+## FAQ
+House Cleaning FAQ for {CITY} Residents
+
+Q: How much do house cleaners charge in {CITY}?
+A: House cleaning in {CITY} typically runs $120-$200 for regular service, depending on your home size and cleaning frequency. We offer up to 20% savings on bi-weekly plans. Free estimates for all {CITY} homeowners.
+
+Q: Do you provide house cleaning services in all {CITY} neighborhoods?
+A: Yes, we cover all {CITY} areas including {NEIGHBORHOOD_1}, {NEIGHBORHOOD_2}, {NEIGHBORHOOD_3}, plus neighborhoods like {NEIGHBORHOOD_4} and {NEIGHBORHOOD_5}. We also serve nearby communities within 25 minutes.
+
+Q: What cleaning products do you use for {CITY}'s hard water?
+A: We use specialized eco-friendly products that handle {CITY}'s hard water mineral buildup effectively. Safe for families and pets, tough on water spots and soap scum.
+
+Q: How far in advance should I book?
+A: Most {CITY} appointments can be scheduled same-week. For specific dates or deep cleaning, booking 3-5 days ahead works best. Regular customers get priority scheduling.
+
+Q: Are your cleaners insured and background-checked?
+A: Every team member passes background checks, personal interviews, and reference verification. We're fully insured and bonded for complete peace of mind.
+
+Q: Do you offer discounts for regular cleaning?
+A: {CITY} customers save 20% on bi-weekly cleaning plans versus one-time rates. We also offer senior discounts and new customer promotions.
+
+
+## MAP_CONTACT
+Serving {CITY}, {STATE}
+[Google Maps embed]
+Full NAP: {BUSINESS}, {ADDRESS}, {PHONE}
+Hours: Mon-Sat 8am-6pm
+Typical response time to web form: under 2 hours
+
+
+## FINAL_CTA
+Ready for Reliable House Cleaning in {CITY}?
+Stop settling for cleaning services that disappoint. Join {COUNT}+ satisfied customers who finally found a cleaning team they can depend on.
+
+Get Free Quote | Call {PHONE}
+Proudly serving {CITY}, {NEIGHBORHOOD_1}, {NEIGHBORHOOD_2}, {NEIGHBORHOOD_3}, and surrounding communities.

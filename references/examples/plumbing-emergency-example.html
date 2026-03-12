@@ -1,0 +1,628 @@
+<!--
+  Emergency Archetype Example (Plumbing)
+  Variables: {BUSINESS}, {CITY}, {STATE}, {PHONE}, {PHONE_DIGITS}, {BRAND_COLOR}, {BRAND_DARK}, {ACCENT}, {LICENSE}
+  This is a structural reference showing block order, CSS architecture, and HTML patterns.
+-->
+
+<style>
+:root {
+  --llp-primary: {BRAND_COLOR};
+  --llp-primary-dark: {BRAND_DARK};
+  --llp-accent: {ACCENT};
+  --llp-light: #F4F6F8;
+  --llp-dark: #1A1A2E;
+}
+
+.btn-llp-primary {
+  background-color: var(--llp-accent);
+  border-color: var(--llp-accent);
+  color: #fff;
+}
+.btn-llp-primary:hover,
+.btn-llp-primary:focus {
+  background-color: color-mix(in srgb, var(--llp-accent) 85%, black);
+  border-color: color-mix(in srgb, var(--llp-accent) 85%, black);
+  color: #fff;
+}
+.btn-outline-llp-primary {
+  border-color: var(--llp-accent);
+  color: var(--llp-accent);
+}
+.btn-outline-llp-primary:hover,
+.btn-outline-llp-primary:focus {
+  background-color: var(--llp-accent);
+  border-color: var(--llp-accent);
+  color: #fff;
+}
+
+.bg-llp-primary { background-color: var(--llp-primary) !important; }
+.bg-llp-dark { background-color: var(--llp-dark) !important; }
+.bg-llp-light { background-color: var(--llp-light) !important; }
+
+.zone-group { scroll-margin-top: 80px; }
+
+.icon-circle {
+  width: 56px; height: 56px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%; font-size: 1.5rem; flex-shrink: 0;
+}
+
+.step-number {
+  width: 48px; height: 48px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%; font-weight: 700;
+}
+
+.card-hover {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.08);
+}
+</style>
+
+
+<!-- HERO (Stage 1 CTA: Intent Match) -->
+<section class="zone-group text-white position-relative overflow-hidden" id="hero"
+  style="margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); width: 100vw;">
+  <img src="{hero_image}" alt="{BUSINESS} serving {CITY}" fetchpriority="high" decoding="sync"
+    class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="z-index: 0;">
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+    style="background: linear-gradient(to right, rgba(10,15,30,0.88) 0%, rgba(10,15,30,0.75) 50%, rgba(10,15,30,0.55) 100%); z-index: 1;"></div>
+  <div class="container position-relative py-5" style="z-index: 2;">
+    <div class="row align-items-center py-lg-5 g-4">
+      <div class="col-lg-7 py-2 py-lg-4">
+        <p class="text-uppercase fw-semibold small mb-2" style="color: var(--llp-accent);">Licensed &amp; Insured | {CITY}, {STATE}</p>
+        <h1 class="display-4 fw-bold lh-sm mb-3">{CITY}'s Experienced, Affordable Plumber</h1>
+        <p class="lead mb-3">Full-service residential and commercial plumbing for {CITY} and surrounding areas. Licensed, insured, upfront pricing.</p>
+        <p class="lead mb-4">Same-day service available. No surprise fees.</p>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a href="tel:+1{PHONE_DIGITS}" class="btn btn-llp-primary btn-lg fw-semibold">
+            <i class="bi bi-telephone me-2"></i>Call Today
+          </a>
+          <a href="{BOOKING_URL}" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-calendar-check me-2"></i>Book Online
+          </a>
+        </div>
+        <div class="d-flex flex-wrap gap-3 small opacity-75">
+          <span><i class="bi bi-patch-check-fill me-1"></i>{STATE} License #{LICENSE}</span>
+          <span><i class="bi bi-star-fill me-1"></i>{RATING} from {REVIEW_COUNT} reviews</span>
+          <span><i class="bi bi-shield-check me-1"></i>Satisfaction guarantee</span>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <!-- Symptom Router (Emergency archetype) -->
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <h2 class="h5 fw-bold mb-2">What's going on?</h2>
+            <p class="text-muted mb-3">Pick the closest match and we'll route you to the right service.</p>
+            <div class="d-grid gap-2">
+              <a class="btn btn-outline-dark text-start" href="#emergency">
+                <i class="bi bi-droplet-fill me-2 text-danger"></i>Active leak or water damage
+              </a>
+              <a class="btn btn-outline-dark text-start" href="#services">
+                <i class="bi bi-thermometer-snow me-2 text-info"></i>No hot water / water heater issue
+              </a>
+              <a class="btn btn-outline-dark text-start" href="#services">
+                <i class="bi bi-tornado me-2 text-warning"></i>Clogged drain / sewer smell
+              </a>
+              <a class="btn btn-outline-dark text-start" href="#services">
+                <i class="bi bi-wrench me-2"></i>Something else / general plumbing
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TRUST BAR -->
+<section class="py-4">
+  <div class="container">
+    <div class="row g-3 text-center">
+      <div class="col-6 col-md-3">
+        <div class="p-3 border rounded-3 h-100">
+          <i class="bi bi-patch-check-fill fs-3" style="color: var(--llp-accent);"></i>
+          <div class="fw-bold mt-2">Licensed &amp; Insured</div>
+          <div class="small text-muted">{STATE} License #{LICENSE}</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-3 border rounded-3 h-100">
+          <i class="bi bi-star-fill fs-3" style="color: var(--llp-accent);"></i>
+          <div class="fw-bold mt-2">{RATING}★ Reviews</div>
+          <div class="small text-muted">{REVIEW_COUNT}+ on Google</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-3 border rounded-3 h-100">
+          <i class="bi bi-cash-coin fs-3" style="color: var(--llp-accent);"></i>
+          <div class="fw-bold mt-2">Clear Pricing</div>
+          <div class="small text-muted">Upfront quotes, no surprises</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-3 border rounded-3 h-100">
+          <i class="bi bi-shield-check fs-3" style="color: var(--llp-accent);"></i>
+          <div class="fw-bold mt-2">Warranty</div>
+          <div class="small text-muted">{WARRANTY_PERIOD} workmanship guarantee</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- AVAILABILITY -->
+<section class="py-3 text-center text-white" style="background-color: var(--llp-primary-dark);">
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+      <span class="d-flex align-items-center gap-2">
+        <span class="bg-success rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
+        <strong>{AVAILABILITY_COUNT} licensed plumbers available today in {CITY}</strong>
+      </span>
+      <span class="opacity-75">|</span>
+      <a href="tel:+1{PHONE_DIGITS}" class="text-white fw-semibold text-decoration-none">
+        <i class="bi bi-telephone-fill me-1"></i>{PHONE}
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- EMERGENCY SECTION -->
+<section id="emergency" class="py-5 bg-llp-light zone-group">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <h2 class="fw-bold mb-2">Plumbing Emergencies in {CITY}</h2>
+        <p class="text-muted mb-4">When water's going where it shouldn't, every minute counts. Here's what we handle urgently.</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="d-flex gap-3 p-3 border rounded-3 bg-white h-100">
+              <div class="icon-circle bg-llp-primary text-white"><i class="bi bi-droplet-fill"></i></div>
+              <div>
+                <div class="fw-bold">Burst Pipes &amp; Active Leaks</div>
+                <div class="small text-muted">Shut off main valve, call us. Average arrival: {RESPONSE_TIME} minutes.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex gap-3 p-3 border rounded-3 bg-white h-100">
+              <div class="icon-circle bg-llp-primary text-white"><i class="bi bi-thermometer-snow"></i></div>
+              <div>
+                <div class="fw-bold">No Hot Water</div>
+                <div class="small text-muted">Water heater diagnosis and repair. Most fixed same visit.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex gap-3 p-3 border rounded-3 bg-white h-100">
+              <div class="icon-circle bg-llp-primary text-white"><i class="bi bi-tornado"></i></div>
+              <div>
+                <div class="fw-bold">Sewer Backup</div>
+                <div class="small text-muted">Camera inspection + clearing. Trucks stocked for 90%+ of drain emergencies.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex gap-3 p-3 border rounded-3 bg-white h-100">
+              <div class="icon-circle bg-llp-primary text-white"><i class="bi bi-exclamation-triangle"></i></div>
+              <div>
+                <div class="fw-bold">Gas Line Smell</div>
+                <div class="small text-muted">Leave the building. Call 911 first, then call us for the repair.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 d-flex flex-column flex-sm-row gap-2">
+          <a href="tel:+1{PHONE_DIGITS}" class="btn btn-llp-primary btn-lg fw-semibold">
+            <i class="bi bi-telephone me-2"></i>Call for Emergency Help
+          </a>
+          <a href="{BOOKING_URL}" class="btn btn-outline-llp-primary btn-lg">
+            <i class="bi bi-calendar-check me-2"></i>Book Urgent Service
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h3 class="h5 fw-bold mb-3"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>While You Wait</h3>
+            <ul class="text-muted mb-0">
+              <li class="mb-2">Turn off the main water valve (usually near the meter or where water enters your home)</li>
+              <li class="mb-2">Turn off the water heater to prevent damage</li>
+              <li class="mb-2">Open faucets to drain remaining water from pipes</li>
+              <li class="mb-2">Move valuables away from standing water</li>
+              <li class="mb-2">Take photos for insurance documentation</li>
+            </ul>
+            <div class="small text-muted mt-3"><strong>Note:</strong> If you smell gas, leave immediately and call 911.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICES GRID (Stage 2 CTA: Service-Specific) -->
+<section class="py-5 zone-group" id="services">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-2">Plumbing Services in {CITY}</h2>
+      <p class="text-muted mb-0">Full-service residential and commercial plumbing. Click any service for details.</p>
+    </div>
+    <div class="row g-4">
+      <!-- Repeat per service: col-md-6 col-lg-4 -->
+      <div class="col-md-6 col-lg-4">
+        <a class="text-decoration-none text-dark" href="{SERVICE_URL}">
+          <div class="card card-hover h-100 border-0 shadow-sm overflow-hidden">
+            <img loading="lazy" src="{SERVICE_IMG}" alt="Drain cleaning in {CITY}" class="card-img-top">
+            <div class="card-body p-4">
+              <h3 class="h5 fw-bold">Drain Cleaning</h3>
+              <p class="text-muted mb-0">Camera-inspected clearing for residential and commercial drains. No dig required for most jobs.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- ... repeat for 5-6 services ... -->
+    </div>
+    <div class="text-center mt-4">
+      <a href="tel:+1{PHONE_DIGITS}" class="btn btn-llp-primary btn-lg fw-semibold">
+        <i class="bi bi-telephone me-2"></i>Need a Specific Service? Call Today
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- MID-PAGE CTA (Stage 3: Social Proof) -->
+<section class="py-3 text-center" style="background-color: var(--llp-primary); color: #fff;">
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+      <span class="fw-semibold">Trusted by {JOB_COUNT}+ {CITY} homeowners since {YEAR_FOUNDED}</span>
+      <a href="tel:+1{PHONE_DIGITS}" class="btn btn-light btn-sm fw-semibold">
+        <i class="bi bi-telephone me-1"></i>{PHONE}
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- LOCAL KNOWLEDGE -->
+<section class="py-5 bg-llp-light zone-group" id="local-knowledge">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-2">{CITY} Plumbing: Local Realities</h2>
+        <p class="text-muted mb-4">{CITY} homes face specific plumbing challenges based on soil, water, and building age.</p>
+        <div class="d-flex gap-3 p-3 border rounded-3 bg-white mb-3">
+          <div class="icon-circle bg-llp-primary text-white"><i class="bi bi-moisture"></i></div>
+          <div>
+            <div class="fw-bold">Water Quality</div>
+            <div class="text-muted small">{CITY} water hardness averages {HARDNESS} GPG. This accelerates mineral buildup in pipes and water heaters, reducing lifespan by {YEARS_REDUCED} years on average.</div>
+          </div>
+        </div>
+        <div class="d-flex gap-3 p-3 border rounded-3 bg-white mb-3">
+          <div class="icon-circle bg-llp-primary text-white"><i class="bi bi-house"></i></div>
+          <div>
+            <div class="fw-bold">Housing Stock</div>
+            <div class="text-muted small">Many {CITY} homes built {DECADE_RANGE} use {PIPE_TYPE} pipes. These commonly fail at {FAILURE_AGE} years, causing {COMMON_ISSUE}.</div>
+          </div>
+        </div>
+        <div class="d-flex gap-3 p-3 border rounded-3 bg-white mb-3">
+          <div class="icon-circle bg-llp-primary text-white"><i class="bi bi-thermometer-half"></i></div>
+          <div>
+            <div class="fw-bold">Climate Factors</div>
+            <div class="text-muted small">{CLIMATE_FACT_WITH_STATS}. We see most {SERVICE_TYPE} calls between {PEAK_MONTHS}.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h3 class="h5 fw-bold mb-3">Common "call us now" signs</h3>
+            <ul class="text-muted mb-0">
+              <li class="mb-2">Water pressure drop in multiple fixtures</li>
+              <li class="mb-2">Discolored water (brown/yellow from corroding pipes)</li>
+              <li class="mb-2">Sewage odor from drains or yard</li>
+              <li class="mb-2">Wet spots on walls, ceiling, or foundation</li>
+              <li class="mb-2">Water heater making popping/rumbling sounds</li>
+            </ul>
+            <div class="mt-4">
+              <a href="tel:+1{PHONE_DIGITS}" class="btn btn-llp-primary fw-semibold w-100">
+                <i class="bi bi-telephone me-2"></i>Experiencing Any of These? Call Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LICENSING & COMPLIANCE (merged: codes + permits + credentials) -->
+<section class="py-5 zone-group" id="licensing">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-2">{CITY} Plumbing Codes, Permits &amp; Licensing</h2>
+      <p class="text-muted mb-0">Transparency: know what regulations guide our work in {CITY}.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h5 fw-bold mb-3"><i class="bi bi-building me-2" style="color: var(--llp-accent);"></i>Code Adoption</h3>
+            <p class="text-muted mb-3">{CITY} follows the {CODE_NAME} ({CODE_YEAR} edition), adopted via {ORDINANCE}. All our work meets or exceeds these requirements.</p>
+            <a href="{CODE_VERIFY_URL}" target="_blank" class="small fw-semibold" style="color: var(--llp-primary);">Verify {CITY} building codes &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h5 fw-bold mb-3"><i class="bi bi-card-checklist me-2" style="color: var(--llp-accent);"></i>Permits &amp; Inspections</h3>
+            <p class="text-muted mb-3">In {CITY}, {PERMIT_REQUIREMENT_SUMMARY}. We handle all permit applications and schedule inspections on your behalf. Permit fees are included in our quotes.</p>
+            <details class="mb-2">
+              <summary class="fw-semibold small">Work that requires a permit</summary>
+              <ul class="text-muted small mt-2">
+                <li>Water heater replacement</li>
+                <li>Re-piping (partial or whole-house)</li>
+                <li>Sewer line replacement</li>
+                <li>Gas line work</li>
+              </ul>
+            </details>
+            <details>
+              <summary class="fw-semibold small">Work that typically does NOT require a permit</summary>
+              <ul class="text-muted small mt-2">
+                <li>Faucet and fixture replacement</li>
+                <li>Drain cleaning</li>
+                <li>Toilet replacement (same location)</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h5 fw-bold mb-3"><i class="bi bi-patch-check me-2" style="color: var(--llp-accent);"></i>Licensing &amp; Insurance</h3>
+            <p class="text-muted">{STATE} Master Plumber License #{LICENSE}. Fully insured: ${INSURANCE_LIMIT} general liability. All technicians carry individual journeyman credentials.</p>
+            <a href="{LICENSE_VERIFY_URL}" target="_blank" class="small fw-semibold" style="color: var(--llp-primary);">Verify our license &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- NEIGHBORHOODS -->
+<section class="py-5 bg-llp-light zone-group" id="neighborhoods">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-2">Areas We Serve in {CITY}</h2>
+      <p class="text-muted mb-0">Local expertise across all {CITY} neighborhoods.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white border rounded-3 h-100">
+          <h3 class="h6 fw-bold mb-2"><i class="bi bi-pin-map-fill me-2" style="color: var(--llp-accent);"></i>{NEIGHBORHOOD_1}</h3>
+          <p class="small text-muted mb-2">{NEIGHBORHOOD_1_DESCRIPTION}</p>
+          <ul class="text-muted mb-0 small">
+            <li>{SERVICE_NOTE_FOR_NEIGHBORHOOD}</li>
+            <li>Drive time from shop: {DRIVE_TIME} minutes</li>
+          </ul>
+        </div>
+      </div>
+      <!-- repeat for 4-6 neighborhoods -->
+    </div>
+    <div class="text-center mt-4">
+      <div class="small text-muted">Serving all {CITY} zip codes: {ZIP_LIST}</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- REVIEWS (Stage 4 CTA: Objection Handling) -->
+<section class="py-5 zone-group" id="reviews">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-2">What {CITY} Homeowners Say</h2>
+      <p class="text-muted mb-0">Real feedback from real customers in {CITY}.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="p-4 border rounded-3 h-100">
+          <div class="fw-bold mb-1">{REVIEWER_1} &bull; {NEIGHBORHOOD_1}</div>
+          <div class="mb-2" style="color: var(--llp-accent);">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="text-muted mb-0">"{REVIEW_TEXT_1}"</p>
+          <div class="small text-muted mt-2">Google &bull; {REVIEW_DATE}</div>
+        </div>
+      </div>
+      <!-- repeat for 2 more reviews -->
+    </div>
+    <div class="text-center mt-4">
+      <a class="btn btn-outline-llp-primary fw-semibold" href="{GBP_URL}" target="_blank">
+        <i class="bi bi-box-arrow-up-right me-2"></i>See Why {CITY} Homeowners Trust Us
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- RECENT WORK -->
+<section class="py-5 bg-llp-light zone-group" id="recent-work">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-2">Recent Plumbing Jobs in {CITY}</h2>
+      <p class="text-muted mb-0">Real examples of problems we solve in {CITY}.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <div class="small text-muted mb-1">{CITY} &bull; {NEIGHBORHOOD_2} &bull; {JOB_DATE}</div>
+            <h3 class="h6 fw-bold mb-2">{JOB_TITLE}</h3>
+            <p class="text-muted mb-0">{JOB_DESCRIPTION_WITH_OUTCOME}. Project budget: {COST_RANGE}.</p>
+          </div>
+        </div>
+      </div>
+      <!-- repeat for 2 more jobs -->
+    </div>
+  </div>
+</section>
+
+
+<!-- WHY CHOOSE (positioned lower for emergency archetype) -->
+<section class="py-5 zone-group" id="why-choose">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Why {CITY} Homeowners Choose {BUSINESS}</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="d-flex gap-3 mb-3">
+          <div class="icon-circle bg-llp-primary text-white flex-shrink-0"><i class="bi bi-geo-alt"></i></div>
+          <div>
+            <h3 class="h6 fw-bold">{JOBS_COMPLETED}+ Jobs in {CITY} Since {YEAR_FOUNDED}</h3>
+            <p class="text-muted mb-0">We know {CITY}'s pipes, soil, and codes because we've been fixing them for {YEARS_IN_BUSINESS} years. Not a franchise. Locally owned.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex gap-3 mb-3">
+          <div class="icon-circle bg-llp-primary text-white flex-shrink-0"><i class="bi bi-truck"></i></div>
+          <div>
+            <h3 class="h6 fw-bold">6 Jobs Per Tech Per Day (Not 10)</h3>
+            <p class="text-muted mb-0">We book fewer jobs so each one gets proper time. That's why we arrive on time and finish right the first visit.</p>
+          </div>
+        </div>
+      </div>
+      <!-- repeat for 2 more differentiators -->
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="py-5 bg-llp-light zone-group" id="faq">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-2">Plumbing FAQ for {CITY} Homeowners</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion" id="faq-accordion">
+          <div class="accordion-item border-0 mb-2">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1">
+                Do you charge extra for weekends or after-hours calls in {CITY}?
+              </button>
+            </h3>
+            <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+              <div class="accordion-body text-muted">{ANSWER_WITH_SPECIFIC_FEES_AND_HOURS}</div>
+            </div>
+          </div>
+          <div class="accordion-item border-0 mb-2">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2">
+                How long until a plumber arrives in {CITY}?
+              </button>
+            </h3>
+            <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+              <div class="accordion-body text-muted">{ANSWER_WITH_SPECIFIC_RESPONSE_TIME_DATA}</div>
+            </div>
+          </div>
+          <!-- repeat for 2-3 more FAQs -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you charge extra for weekends or after-hours calls in {CITY}?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{ANSWER}"
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- MAP / CONTACT -->
+<section class="py-5 zone-group" id="contact">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Serving {CITY}, {STATE}</h2>
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="ratio ratio-1x1 rounded-3 overflow-hidden shadow-sm">
+          <iframe src="{MAP_EMBED_URL}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <h3 class="h5 fw-bold mb-3">How It Works</h3>
+        <div class="d-flex gap-3 mb-3">
+          <div class="step-number bg-llp-primary text-white">1</div>
+          <div>
+            <div class="fw-bold">Call or Book Online</div>
+            <div class="text-muted small">Describe your issue. We'll give you a time window and honest price range.</div>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mb-3">
+          <div class="step-number bg-llp-primary text-white">2</div>
+          <div>
+            <div class="fw-bold">On-Site Diagnosis</div>
+            <div class="text-muted small">Licensed plumber inspects and provides a written quote before any work begins.</div>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mb-4">
+          <div class="step-number bg-llp-primary text-white">3</div>
+          <div>
+            <div class="fw-bold">Fix &amp; Verify</div>
+            <div class="text-muted small">We complete the repair, test everything, and clean up. You get a {WARRANTY_PERIOD} warranty.</div>
+          </div>
+        </div>
+        <div class="p-3 border rounded-3 bg-llp-light">
+          <div class="fw-bold">{BUSINESS}</div>
+          <div class="small text-muted">{ADDRESS}</div>
+          <div class="small text-muted">{PHONE} | {EMAIL}</div>
+          <div class="small text-muted">Hours: {HOURS}</div>
+          <div class="small text-muted">Web form response: under 2 hours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA (Stage 5: Closing Argument) -->
+<section class="py-5 text-center zone-group" id="cta" style="background-color: var(--llp-primary); color: #fff;">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Ready for Honest, Licensed Plumbing in {CITY}?</h2>
+    <p class="lead mb-2">Upfront quotes. {WARRANTY_PERIOD} warranty. No surprises.</p>
+    <p class="mb-4">Join {JOB_COUNT}+ {CITY} homeowners who trust {BUSINESS}.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+      <a href="tel:+1{PHONE_DIGITS}" class="btn btn-light btn-lg fw-semibold">
+        <i class="bi bi-telephone me-2"></i>Call {PHONE}
+      </a>
+      <a href="{BOOKING_URL}" class="btn btn-outline-light btn-lg">
+        <i class="bi bi-calendar-check me-2"></i>Book Online
+      </a>
+    </div>
+    <p class="small opacity-75 mb-0">Proudly serving {CITY}, {NEIGHBORHOOD_1}, {NEIGHBORHOOD_2}, {NEIGHBORHOOD_3}, and surrounding communities.</p>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+# Session context (personal working notes)
+.claude-context/
+
+# Council deliberation logs (internal research, not needed to run the skill)
+references/council-deliberation-*.json
+
+# macOS
+.DS_Store
