@@ -67,10 +67,10 @@ The intent analyzer's 3-layer model determines copy tone within blocks:
 City name should appear in roughly 40-60% of H2s. Not every one.
 
 **Good H2s:**
-- "Plumbing Services in Plano"
-- "What Plano Homeowners Say"
-- "Areas We Serve in Plano"
-- "Permits & Inspections in Plano"
+- "Plumbing Services in Gotham"
+- "What Gotham Homeowners Say"
+- "Areas We Serve in Gotham"
+- "Permits & Inspections in Gotham"
 
 **Also good (no city, natural):**
 - "How it works"
@@ -78,8 +78,8 @@ City name should appear in roughly 40-60% of H2s. Not every one.
 - "Our Service Approach"
 
 **Bad (forced):**
-- "Plano Plumbing Plano Services for Plano Homes"
-- "Why Choose Us for Plano"
+- "Gotham Plumbing Gotham Services for Gotham Homes"
+- "Why Choose Us for Gotham"
 
 ---
 
@@ -262,7 +262,7 @@ Keep service grid card descriptions to ONE sentence. They should tell the visito
 **Good:**
 - "Diagnosis-first approach for under-slab leaks and water loss."
 - "Comprehensive cleaning that tackles those spots you've been avoiding."
-- "Perfect for Cambridge renters and new homeowners."
+- "Perfect for Gotham renters and new homeowners."
 
 **Bad:**
 - "We offer the best slab leak detection and repair services in the area with cutting-edge technology."
@@ -281,9 +281,9 @@ Focus on process, pricing, products, frequency, what's included, customization.
 **FAQ format:** Question as `<summary>`, answer as paragraph in `<details>` body. Include city name in most questions naturally.
 
 **Good FAQ questions:**
-- "How much do house cleaners charge in Cambridge, Ontario?"
-- "Do you offer same-day service in Plano?"
-- "Do you handle permits for plumbing work in Plano?"
+- "How much do house cleaners charge in Gotham?"
+- "Do you offer same-day service in Gotham?"
+- "Do you handle permits for plumbing work in Gotham?"
 
 **Bad FAQ questions:**
 - "Why should I choose your company?" (not a real question people ask)

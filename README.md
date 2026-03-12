@@ -1,6 +1,6 @@
 # Local Landing Page (LLP) Builder
 
-A Claude Code skill that generates city-level landing pages for local service businesses. An LLP is the page someone hits searching "[niche] [city]" (e.g., "plumber dallas", "house cleaner cambridge") or from a Google Business Profile listing.
+A Claude Code skill that generates city-level landing pages for local service businesses. An LLP is the page someone hits searching "[niche] [city]" (e.g., "plumber gotham", "house cleaner gotham") or from a Google Business Profile listing.
 
 It lists all services briefly, builds geographic trust with real local research, and routes visitors to deeper service pages or to call/book.
 
@@ -18,7 +18,7 @@ It lists all services briefly, builds geographic trust with real local research,
 
 ```
 /llp {client-slug} {city} {state}
-/local-landing-page acme-plumbing dallas tx
+/local-landing-page acme-plumbing gotham ny
 ```
 
 Requires a client profile at `~/.claude/config/clients/{slug}/profile.json` with business name, niche, services, brand color, and phone number.
