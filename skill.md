@@ -1,6 +1,6 @@
 ---
 name: local-landing-page
-description: Builds local landing pages (LLPs) for service businesses — the city-level hub page for "[niche] [city]" searches or GBP listings. Generates Bootstrap 5 HTML with niche-adaptive structure (emergency vs planning vs hybrid archetypes), live city research, and brand-colored layouts. Use when creating city pages, location pages, or geo landing pages. Triggers: /llp, /local-landing-page, build a city page, create a location page.
+description: "Builds local landing pages (LLPs) for service businesses - the city-level hub page for [niche] [city] searches or GBP listings. Generates Bootstrap 5 HTML with niche-adaptive structure (emergency vs planning vs hybrid archetypes), live city research, and brand-colored layouts. Use when creating city pages, location pages, or geo landing pages. Triggers: /llp, /local-landing-page, build a city page, create a location page."
 ---
 
 # Local Landing Page (LLP) Builder
